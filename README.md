@@ -5,14 +5,17 @@
 
 ### User stories
 -------------------------------------------------------------
-User logins
-User can view other users 
-User can follow other users
-User can unfollow other users
-User can delete theirs account
-User can post status
-User can comment on other user's status
-
+    User logins
+    User can view other users   
+    User can accept or deny followers 
+    User can follow other users
+    User can unfollow other users
+    User can view other user's status
+    User can post status
+    User can comment on other user's status
+    User can change their profile(name, email, image)
+    User can choose their top friends
+    User can delete their account
 
 ----------------------------------------------------------
 ## Routes
@@ -27,17 +30,16 @@ User can comment on other user's status
 | GET | api/user/about | About.js | About Page |
 | GET | api/user/profile | Profile.js | User Profile |
 
-
 ### To be made:
 ----------------
 
 | Method | Path | Location | Purpose |
 | ------ | ---------------- | -------------- | ------------------- |
-| GET | api/users/all | users.js | view all users in database |
+| GET | api/users/all | home.js | view all users in database |
 | PUT | api/users/follow | users.js | add followers to user|
 | PUT | api/users/unfollow | users.js | unfollow a user|
+| PUT | api/users/id | profile.js | update account|
 | DELETE | api/users/id | profile.js | delete the user account|
-
 
 ### Possible routes would require small changes to the schema’s:
 -----------------------------------------------------------------
@@ -49,6 +51,7 @@ User can comment on other user's status
 | GET | api/users/view_status/id | users.js | view one status|
 | POST | api/users/status/id | profile.js | users can comment on status|
 | DELETE | api/users/view_status/id | profile.js | delete one status|
+| POST | api/users/followers | users.js | pick top friends|
 
 
 ## Getting Started with Create React App
