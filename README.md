@@ -1,5 +1,6 @@
+
 ## ERD
-![images](./images/mongo_relations.png)
+![images](./images/relations2.png)
 
 
 ### User stories
@@ -48,7 +49,6 @@ User can comment on other user's status
 | GET | api/users/view_status/id | users.js | view one status|
 | POST | api/users/status/id | profile.js | users can comment on status|
 | DELETE | api/users/view_status/id | profile.js | delete one status|
-
 
 
 ## Getting Started with Create React App
