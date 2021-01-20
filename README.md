@@ -1,4 +1,57 @@
-# Getting Started with Create React App
+## ERD
+![images](./images/mongo_relations.png)
+
+
+### User stories
+-------------------------------------------------------------
+User logins
+User can view other users 
+User can follow other users
+User can unfollow other users
+User can delete theirs account
+User can post status
+User can comment on other user's status
+
+
+----------------------------------------------------------
+## Routes
+
+### Current:
+-------------
+| Method | Path | Location | Purpose |
+| ------ | ---------------- | -------------- | ------------------- |
+| TEST/GET | api/users/test | Test | Test |
+| GET | api/user/register | Signup.js | Signup Page |
+| GET | api/user/login | Login.js | Login Page |
+| GET | api/user/about | About.js | About Page |
+| GET | api/user/profile | Profile.js | User Profile |
+
+
+### To be made:
+----------------
+
+| Method | Path | Location | Purpose |
+| ------ | ---------------- | -------------- | ------------------- |
+| GET | api/users/all | users.js | view all users in database |
+| PUT | api/users/follow | users.js | add followers to user|
+| PUT | api/users/unfollow | users.js | unfollow a user|
+| DELETE | api/users/id | profile.js | delete the user account|
+
+
+### Possible routes would require small changes to the schema’s:
+-----------------------------------------------------------------
+
+| Method | Path | Location | Purpose |
+| ------ | ---------------- | -------------- | ------------------- |
+| POST | api/users/status | users.js | user can post status |
+| GET | api/users/view_status | users.js | view all status’ by all users|
+| GET | api/users/view_status/id | users.js | view one status|
+| POST | api/users/status/id | profile.js | users can comment on status|
+| DELETE | api/users/view_status/id | profile.js | delete one status|
+
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +121,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
