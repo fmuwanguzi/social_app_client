@@ -6,11 +6,11 @@ import setAuthToken from './utils/setAuthToken';
 // CSS
 import './App.css';
 // Components
-import Welcome from './components/Welcome';
+import Welcome from './Pages/Welcome';
 import Footer from './components/Footer';
-import Signup from './components/Signup';
-import Login from './components/Login';
-import Profile from './components/Profile'
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
+import Profile from './Pages/Profile'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
@@ -56,7 +56,6 @@ function App() {
 
   return (
     <div className="App">
-      <div className="container mt-5">
         <Switch>
           <Route path='/signup' component={ Signup } />
           <Route 
@@ -65,7 +64,6 @@ function App() {
           <PrivateRoute path="/profile" component={ Profile } user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={ Welcome }/>
         </Switch>
-      </div>
       <Footer />
     </div>
   );
