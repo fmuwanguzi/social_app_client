@@ -5,7 +5,7 @@ const Welcome = () => {
   return (
     <div className="landing-page">
       <h1>KickIt</h1>
-      <p>Connect with friends, family and many others around the world.</p>
+      <p className='intro-text'>Connect with friends, family and many others around the world.</p>
       <div className="btn-container">
         <Link to='/login'>
           <button type="button" className="login-btn">
