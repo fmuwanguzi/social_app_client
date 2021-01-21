@@ -15,7 +15,7 @@ const Welcome = () => {
 
         <Link to='signup'>
           <button type="button" class="signup-btn">
-            Sign Out
+            Sign Up
           </button>
         </Link>
       </div>
