@@ -265,7 +265,7 @@ form {
 
  @keyframes moving-up {
   from {bottom: 0px;}
-  to {bottom: 200px;}
+  to {bottom: 120px;}
 }
 
 .landing-page-signup > h1, p {
@@ -278,7 +278,7 @@ form {
   from {opacity: 0;}
   to {opacity: 1;}
   from {bottom: 0px;}
-  to {bottom: 150px;}
+  to {bottom: 100px;}
 }
 
 form {
