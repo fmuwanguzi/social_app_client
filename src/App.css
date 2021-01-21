@@ -371,17 +371,19 @@ form {
 }
 
 .feed {
-  border: 3px solid #EDF2FB;
+  border-left: 3px solid #CCDBFD;
+  border-right: 3px solid #CCDBFD;
 }
 .col-6 {
   border: 3px solid #EDF2FB;
 }
 
 .post-container {
-  box-shadow: 0 0 5px 5px #EDF2FB;
-  border: 2px solid black;
+  box-shadow: 0 0 15px 2px #c9c9cd;
+  background-color: #E2EAFC;
+  border-radius: 15px;
   padding: 10px;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 NavLink {

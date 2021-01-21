@@ -14,7 +14,7 @@ const Feed = () => {
         </p>
       </div>
       <div className="post-container">
-        <h4>Update #1</h4>
+        <h4>Update #2</h4>
         <p>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi
           quasi deleniti doloremque veniam consequuntur? Fugit cum molestiae
