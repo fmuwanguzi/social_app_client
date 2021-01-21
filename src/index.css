@@ -2,6 +2,9 @@ body {
   margin: 0 auto;
   padding: 0;
   font-family: sans-serif;
+  background-color: #D7E3FC;
+  font-family: 'Rubik', sans-serif;
+
 }
 .logout-link {
   cursor: pointer;

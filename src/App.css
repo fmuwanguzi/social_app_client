@@ -2,6 +2,10 @@
   margin: 0;
 }
 
+/* Navbar */
+
+
+
 /* Welcome Page Styling */
 
 .landing-page {
@@ -146,7 +150,7 @@ h1 {
   to {bottom: 200px;}
 }
 
-.landing-page-login > h1, .intro-text {
+.landing-page-login > h1, .intro-text-login {
   position: relative;
   -webkit-animation: moving-up 4s forwards;
   animation: moving-up 4s forwards;
@@ -356,4 +360,30 @@ form {
   .intro-text-signup  {
     font-size: 1rem;
   }
+}
+
+
+/* Home Page */
+
+.content-containers {
+  padding-top: 2rem;
+  height: 100vh;
+}
+
+.feed {
+  border: 3px solid #EDF2FB;
+}
+.col-6 {
+  border: 3px solid #EDF2FB;
+}
+
+.post-container {
+  box-shadow: 0 0 5px 5px #EDF2FB;
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 1rem;
+}
+
+NavLink {
+  color: black;
 }
