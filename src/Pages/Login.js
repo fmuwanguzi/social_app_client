@@ -47,7 +47,7 @@ const Login = (props) => {
     return (
         <div className="landing-page-login">
             <h1>KickIt</h1>
-            <p className='intro-text'>Connect with friends, family and many others around the world.</p>
+            <p className='intro-text-login'>Connect with friends, family and many others around the world.</p>
                     <form onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>

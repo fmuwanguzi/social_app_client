@@ -127,7 +127,7 @@ h1 {
   text-align: center;
 }
 
-.landing-page-login > p {
+.intro-text-login {
   font-size: 2rem;
   color: #EDF2FB;
   margin-bottom: 10px;
@@ -146,7 +146,7 @@ h1 {
   to {bottom: 200px;}
 }
 
-.landing-page-login > h1, p {
+.landing-page-login > h1, .intro-text {
   position: relative;
   -webkit-animation: moving-up 4s forwards;
   animation: moving-up 4s forwards;
@@ -172,7 +172,7 @@ form {
     to {bottom: 100px;}
   }
   
-  .landing-page-login > h1, p {
+  .landing-page-login > h1, .intro-text-login {
     position: relative;
     -webkit-animation: moving-up 4s forwards;
     animation: moving-up 4s forwards;
@@ -195,7 +195,7 @@ form {
   h1 {
     font-size: 7rem;
   }
-  .landing-page-login > p {
+  .intro-text-login {
     font-size: 1.5rem;
   }
 }
@@ -206,7 +206,7 @@ form {
     to {bottom: 60px;}
   }
   
-  .landing-page-login > h1, p {
+  .landing-page-login > h1, .intro-text-login {
     position: relative;
     -webkit-animation: moving-up 4s forwards;
     animation: moving-up 4s forwards;
@@ -229,7 +229,7 @@ form {
   h1 {
     font-size: 7rem;
   }
-  .landing-page-login > p {
+  .intro-text-login {
     font-size: 1.5rem;
   }
 }
@@ -249,7 +249,7 @@ form {
   text-align: center;
 }
 
-.landing-page-signup > p {
+.intro-text-signup {
   font-size: 2rem;
   color: #EDF2FB;
   margin-bottom: 10px;
@@ -268,7 +268,7 @@ form {
   to {bottom: 120px;}
 }
 
-.landing-page-signup > h1, p {
+.landing-page-signup > h1, .intro-text-signup {
   position: relative;
   -webkit-animation: moving-up 4s forwards;
   animation: moving-up 4s forwards;
@@ -294,7 +294,7 @@ form {
     to {bottom: 50px;}
   }
   
-  .landing-page-signup > h1, p {
+  .landing-page-signup > h1, .intro-text-signup  {
     position: relative;
     -webkit-animation: moving-up 4s forwards;
     animation: moving-up 4s forwards;
@@ -317,7 +317,7 @@ form {
   h1 {
     font-size: 7rem;
   }
-  .landing-page-signup > p {
+  .intro-text-signup  {
     font-size: 1.5rem;
   }
 }
@@ -328,7 +328,7 @@ form {
     to {bottom: 20px;}
   }
   
-  .landing-page-signup > h1, p {
+  .landing-page-signup > h1, .intro-text-signup  {
     position: relative;
     -webkit-animation: moving-up 4s forwards;
     animation: moving-up 4s forwards;
@@ -353,7 +353,7 @@ form {
   }
 
   
-  .landing-page-signup > p {
+  .intro-text-signup  {
     font-size: 1rem;
   }
 }
