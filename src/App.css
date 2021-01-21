@@ -1,6 +1,8 @@
 .app {
   margin: 0;
 }
+
+/* Welcome Page Styling */
 .landing-page {
   background: url('https://images.unsplash.com/photo-1559854036-2409f22a918a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80') center center/cover no-repeat;
   height: 100vh;
@@ -72,3 +74,161 @@ h1 {
   background-color: #B6CCFE;
 }
 
+@keyframes moving {
+  from {top: -700px;}
+  to {top: 0px;}
+}
+
+.landing-page > h1 {
+  position: relative;
+  -webkit-animation: moving 3s;
+  animation: moving 3s;
+}
+
+@keyframes moving-text {
+  from {left: -2000px;}
+  to {left: 0px;}
+}
+
+.landing-page > .intro-text {
+  position: relative;
+  -webkit-animation: moving-text 3s;
+  animation: moving-text 3s;
+}
+
+@keyframes buttons {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* The element to apply the animation to */
+.login-btn, .signup-btn {
+  position: relative;
+  animation-delay: 3s;
+  -webkit-animation: buttons 3s;
+  animation: buttons 3s;
+}
+
+
+
+ /* Log In Page */
+
+ .landing-page-login {
+  background: url('https://images.unsplash.com/photo-1559854036-2409f22a918a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80') center center/cover no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(76, 101, 203, 0.6);
+  object-fit: contain;
+  text-align: center;
+}
+
+.landing-page-login > p {
+  font-size: 2rem;
+  color: #EDF2FB;
+  margin-bottom: 10px;
+}
+
+ .login {
+   color: #fff;
+ }
+
+ form {
+  opacity: 0;
+}
+
+ @keyframes moving-up {
+  from {bottom: 0px;}
+  to {bottom: 200px;}
+}
+
+.landing-page-login > h1, p {
+  position: relative;
+  -webkit-animation: moving-up 4s forwards;
+  animation: moving-up 4s forwards;
+}
+
+@keyframes show-login {
+  from {opacity: 0;}
+  to {opacity: 1;}
+  from {bottom: 0px;}
+  to {bottom: 150px;}
+}
+
+form {
+  position: relative;
+  -webkit-animation: show-login 4s forwards;
+  animation: show-login 4s forwards;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  @keyframes moving-up {
+    from {bottom: 0px;}
+    to {bottom: 100px;}
+  }
+  
+  .landing-page-login > h1, p {
+    position: relative;
+    -webkit-animation: moving-up 4s forwards;
+    animation: moving-up 4s forwards;
+  }
+  
+  @keyframes show-login {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    from {bottom: 0px;}
+    to {bottom: 80px;}
+  }
+  
+  form {
+    position: relative;
+    -webkit-animation: show-login 4s forwards;
+    animation: show-login 4s forwards;
+    color: white;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+  .landing-page-login > p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  @keyframes moving-up {
+    from {bottom: 0px;}
+    to {bottom: 60px;}
+  }
+  
+  .landing-page-login > h1, p {
+    position: relative;
+    -webkit-animation: moving-up 4s forwards;
+    animation: moving-up 4s forwards;
+  }
+  
+  @keyframes show-login {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    from {bottom: 0px;}
+    to {bottom: 40px;}
+  }
+  
+  form {
+    position: relative;
+    -webkit-animation: show-login 4s forwards;
+    animation: show-login 4s forwards;
+    color: white;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+  .landing-page-login > p {
+    font-size: 1.5rem;
+  }
+}
