@@ -1,7 +1,10 @@
 import React from "react";
+import Navbar from "../components/Navbar"
 
 const Settings = () => {
   return (
+      <>
+      <Navbar />
     <div className="container settings-container">
       <div className="row">
         <div class="col">
@@ -35,6 +38,7 @@ const Settings = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

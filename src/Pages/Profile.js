@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 import Feed from "../components/Feed"
+import Navbar from "../components/Navbar"
 
 
 
@@ -55,6 +56,8 @@ const Profile = (props) => {
   //     };
 
   return (
+      <>
+      <Navbar />
     <div className="container content-container">
       <div className="row">
         <div class="col-4">
@@ -74,6 +77,7 @@ const Profile = (props) => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -64,7 +64,6 @@ function App() {
           <Route 
             path='/login' 
             render={ (props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>} />
-          <Navbar />
         <Switch>
           <Route path="/profile" component={ Profile } /* user={currentUser} handleLogout={handleLogout} */ />
           <Route exact path="/" component={ Welcome }/>

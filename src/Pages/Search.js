@@ -2,9 +2,12 @@ import React from "react";
 
 import SearchUsers from "../components/SearchUsers"
 import PostStatus from "../components/PostStatus"
+import Navbar from "../components/Navbar"
 
 const Search = () => {
   return (
+      <>
+      <Navbar />
     <div class="container page-container">
       <div class="row">
         <div class="content-containers col-sm">
@@ -28,6 +31,7 @@ const Search = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
