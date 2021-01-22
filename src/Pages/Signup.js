@@ -55,7 +55,7 @@ const Signup = () => {
   return (
     <div className="landing-page-signup">
       <h1>KickIt</h1>
-      <p className="intro-text">
+      <p className="intro-text-signup">
         Connect with friends, family and many others around the world.
       </p>
       <form onSubmit={handleSubmit}>

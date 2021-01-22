@@ -11,6 +11,7 @@ import Footer from './components/Footer';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Profile from './Pages/Profile'
+import Home from './Pages/Home';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
@@ -63,6 +64,7 @@ function App() {
             render={ (props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>} />
           <PrivateRoute path="/profile" component={ Profile } user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={ Welcome }/>
+          <Route path='/home' component={Home}/>
         </Switch>
       <Footer />
     </div>
