@@ -1,12 +1,10 @@
 import React from "react";
 import PostStatus from '../components/PostStatus'
 import Feed from '../components/Feed'
-import Navbar from '../components/Navbar'
 
 const Home = () => {
   return (
     <div class="container page-container">
-        <Navbar />
       <div class="row">
         <div class="content-containers col-sm">
             <h2>Profile</h2>

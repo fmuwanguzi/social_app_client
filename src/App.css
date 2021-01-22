@@ -367,12 +367,12 @@ form {
 
 .content-containers {
   padding-top: 2rem;
-  height: 100vh;
+  height: 90vh;
 }
 
 .feed {
-  border-left: 3px solid #CCDBFD;
-  border-right: 3px solid #CCDBFD;
+  border-left: 2px solid #CCDBFD;
+  border-right: 2px solid #CCDBFD;
 }
 .col-6 {
   border: 3px solid #EDF2FB;
@@ -388,4 +388,10 @@ form {
 
 NavLink {
   color: black;
+}
+
+/* Profile Page */
+
+.profile-posts {
+  border-left: 2px solid #CCDBFD;
 }
