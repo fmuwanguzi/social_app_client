@@ -395,3 +395,20 @@ NavLink {
 .profile-posts {
   border-left: 2px solid #CCDBFD;
 }
+
+/* Settings Page */
+
+.settings-container h2 {
+  text-align: center;
+}
+
+.settings-container input {
+  margin: 2rem;
+  width: 60%;
+  margin: 2rem auto;
+}
+
+.row {
+  margin-bottom: 6rem;
+}
+

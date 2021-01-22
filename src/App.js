@@ -12,6 +12,8 @@ import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Profile from './Pages/Profile'
 import Home from './Pages/Home';
+import Search from './Pages/Search';
+import Settings from './Pages/Settings';
 import Navbar from './components/Navbar';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
@@ -67,6 +69,8 @@ function App() {
           <Route path="/profile" component={ Profile } /* user={currentUser} handleLogout={handleLogout} */ />
           <Route exact path="/" component={ Welcome }/>
           <Route path='/home' component={Home}/>
+          <Route path='/search' component={Search}/>
+          <Route path='/settings' component={Settings}/>
         </Switch>
       <Footer />
     </div>
