@@ -18,7 +18,13 @@ const Navbar = (props) => {
                             <NavLink className="nav-link" exact to="/home">Home</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link"  to="/about">About</NavLink>
+                            <NavLink className="nav-link"  to="/profile">Profile</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link"  to="/search">Search</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link"  to="/settings">Settings</NavLink>
                         </li>
                     </ul>
                     {

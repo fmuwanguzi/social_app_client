@@ -1,9 +1,10 @@
 import React from "react";
-import PostStatus from "../components/PostStatus";
-import Feed from "../components/Feed";
+
+import SearchUsers from "../components/SearchUsers"
+import PostStatus from "../components/PostStatus"
 import Navbar from "../components/Navbar"
 
-const Home = () => {
+const Search = () => {
   return (
       <>
       <Navbar />
@@ -23,7 +24,7 @@ const Home = () => {
           <h5>Top Friends</h5>
         </div>
         <div class="content-containers feed col-sm-6">
-          <Feed />
+          <SearchUsers />
         </div>
         <div class="content-containers col-sm">
           <PostStatus />
@@ -34,4 +35,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Search;
