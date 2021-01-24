@@ -7,14 +7,14 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 // const { REACT_APP_SERVER_URL } = keys;
 
 const Signup = () => {
-  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
 
-  const handleName = (e) => {
-    setName(e.target.value);
+  const handleUserName = (e) => {
+    setUsername(e.target.value);
   };
 
   const handleEmail = (e) => {
@@ -33,7 +33,7 @@ const Signup = () => {
     e.preventDefault();
 
     if (password === confirmPassword && password.length >= 8) {
-      const newUser = { name, email, password };
+      const newUser = { username, email, password };
 
       axios
         .post(`${REACT_APP_SERVER_URL}/api/users/register`, newUser)
@@ -60,12 +60,12 @@ const Signup = () => {
       </p>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="username">Name</label>
           <input
             type="text"
-            name="name"
-            value={name}
-            onChange={handleName}
+            username="username"
+            value={username}
+            onChange={handleUserName}
             className="form-control"
           />
         </div>

@@ -57,7 +57,7 @@ const Profile = (props) => {
 
   return (
       <>
-      <Navbar />
+      {/* <Navbar /> */}
     <div className="container content-container">
       <div className="row">
         <div class="col-4">

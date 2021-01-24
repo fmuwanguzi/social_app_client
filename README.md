@@ -25,8 +25,8 @@
 | Method | Path | Location | Purpose |
 | ------ | ---------------- | -------------- | ------------------- |
 | TEST/GET | api/users/test | Test | Test |
-| GET | api/user/register | Signup.js | Signup Page |
-| GET | api/user/login | Login.js | Login Page |
+| POST | api/user/register | Signup.js | Signup Page |
+| POST | api/user/login | Login.js | Login Page |
 | GET | api/user/about | About.js | About Page |
 | GET | api/user/profile | Profile.js | User Profile |
 
@@ -36,9 +36,9 @@
 | Method | Path | Location | Purpose |
 | ------ | ---------------- | -------------- | ------------------- |
 | GET | api/users/all | home.js | view all users in database |
-| PUT | api/users/follow | users.js | add followers to user|
-| PUT | api/users/unfollow | users.js | unfollow a user|
-| PUT | api/users/id | profile.js | update account|
+| PUT | api/users/followers/add/id | users.js | add followers to user|
+| PUT | api/users/followers/remove/id | users.js | revmove follower from a user|
+| PUT | api/update/id | profile.js | update picture and bio|
 | DELETE | api/users/id | profile.js | delete the user account|
 
 ### Possible routes would require small changes to the schema’s:

@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar"
 const Home = () => {
   return (
       <>
-      <Navbar />
+      {/* <Navbar /> */}
     <div class="container page-container">
       <div class="row">
         <div class="content-containers col-sm">

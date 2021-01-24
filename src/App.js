@@ -60,12 +60,13 @@ function App() {
 
   return (
     <div className="App">
+          <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} user={currentUser} />
           <Route path='/signup' component={ Signup } />
           <Route 
             path='/login' 
             render={ (props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>} />
         <Switch>
-          <Route path="/profile" component={ Profile } /* user={currentUser} handleLogout={handleLogout} */ />
+          <Route path="/profile" component={ Profile } user={currentUser} handleLogout={handleLogout} />
           <Route exact path="/" component={ Welcome }/>
           <Route path='/home' component={Home}/>
           <Route path='/search' component={Search}/>
