@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Feed from "../components/Feed"
 import Navbar from "../components/Navbar"
+import ProfileSection from "../components/ProfileSection"
 
 
 
@@ -61,15 +62,7 @@ const Profile = (props) => {
     <div className="container content-container">
       <div className="row">
         <div class="col-4">
-            <h2>Profile</h2>
-            <h4>Angel Barranco</h4>
-            <p>Fresno,CA</p>
-            <p>I’m a web developer who partially has an idea of what he is doing</p>
-            <button>Follow</button>
-            <p>89 Followers</p>
-            <p>112 Following</p>
-
-            <h5>Top Friends</h5>
+           <ProfileSection />
         </div>
         <div class="col-8 profile-posts">
             <h2>My Posts</h2>

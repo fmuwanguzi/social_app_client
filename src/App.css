@@ -392,6 +392,11 @@ NavLink {
 
 /* Profile Page */
 
+.profile-img {
+  border-radius: 50%;
+  height: 8rem;
+}
+
 .profile-posts {
   border-left: 2px solid #CCDBFD;
 }
@@ -412,3 +417,9 @@ NavLink {
   margin-bottom: 6rem;
 }
 
+/* Feed */
+
+.post-image {
+  border-radius: 50%;
+  height: 3rem;
+}

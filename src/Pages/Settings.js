@@ -4,7 +4,11 @@ import Navbar from "../components/Navbar"
 const Settings = () => {
   return (
       <>
+<<<<<<< HEAD
       {/*<Navbar />  */}
+=======
+      <Navbar />    
+>>>>>>> b9ce987fecc715ef69ced2e270ad9a43a4a67457
     <div className="container settings-container">
       <div className="row">
         <div class="col">
