@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App">
-          <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} user={currentUser} />
+          
           <Route path='/signup' component={ Signup } />
           <Route 
             path='/login' 
