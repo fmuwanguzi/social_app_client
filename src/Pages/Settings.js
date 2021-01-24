@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar"
 const Settings = () => {
   return (
       <>
-      <Navbar />
+      <Navbar />    
     <div className="container settings-container">
       <div className="row">
         <div class="col">
