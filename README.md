@@ -1,4 +1,60 @@
-# Getting Started with Create React App
+
+## ERD
+![images](./images/relations2.png)
+
+
+### User stories
+-------------------------------------------------------------
+    User logins
+    User can view other users   
+    User can accept or deny followers 
+    User can follow other users
+    User can unfollow other users
+    User can view other user's status
+    User can post status
+    User can comment on other user's status
+    User can change their profile(name, email, image)
+    User can choose their top friends
+    User can delete their account
+
+----------------------------------------------------------
+## Routes
+
+### Current:
+-------------
+| Method | Path | Location | Purpose |
+| ------ | ---------------- | -------------- | ------------------- |
+| TEST/GET | api/users/test | Test | Test |
+| POST | api/user/register | Signup.js | Signup Page |
+| POST | api/user/login | Login.js | Login Page |
+| GET | api/user/about | About.js | About Page |
+| GET | api/user/profile | Profile.js | User Profile |
+
+### To be made:
+----------------
+
+| Method | Path | Location | Purpose |
+| ------ | ---------------- | -------------- | ------------------- |
+| GET | api/users/all | home.js | view all users in database |
+| PUT | api/users/followers/add/id | users.js | add followers to user|
+| PUT | api/users/followers/remove/id | users.js | revmove follower from a user|
+| PUT | api/update/id | profile.js | update picture and bio|
+| DELETE | api/users/id | profile.js | delete the user account|
+
+### Possible routes would require small changes to the schema’s:
+-----------------------------------------------------------------
+
+| Method | Path | Location | Purpose |
+| ------ | ---------------- | -------------- | ------------------- |
+| POST | api/users/status | users.js | user can post status |
+| GET | api/users/view_status | users.js | view all status’ by all users|
+| GET | api/users/view_status/id | users.js | view one status|
+| POST | api/users/status/id | profile.js | users can comment on status|
+| DELETE | api/users/view_status/id | profile.js | delete one status|
+| POST | api/users/followers | users.js | pick top friends|
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +124,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+

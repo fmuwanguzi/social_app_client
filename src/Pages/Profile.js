@@ -71,6 +71,7 @@ const Profile = (props) => {
   
 
   return (
+
     <>
       <div className="container content-container">
         {/* { props.user ? userData : errorDiv() } */}
@@ -88,6 +89,7 @@ const Profile = (props) => {
             <h5>Top Friends</h5>
           </div>
           <div className="col-8 profile-posts">
+
             <h2>My Posts</h2>
             <Feed />
           </div>
