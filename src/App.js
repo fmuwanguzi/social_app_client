@@ -53,8 +53,6 @@ function App() {
     }
   }
 
-  console.log(setCurrentUser);
-
   return (
     <div className="App">
           <Navbar handleLogout={handleLogout} isAuth={isAuthenticated}/>
