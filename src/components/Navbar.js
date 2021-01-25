@@ -47,9 +47,6 @@ const Navbar = (props) => {
           {props.isAuth ? (
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-            
-              </li>
-              <li className="nav-item">
                 <span
                   onClick={props.handleLogout}
                   className="nav-link logout-link"

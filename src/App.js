@@ -58,18 +58,18 @@ function App() {
   return (
     <div className="App">
           <Navbar handleLogout={handleLogout} isAuth={isAuthenticated}/>
-          
-          <Switch>
+
           <Route exact path="/" component={ Welcome }/>
           <Route path='/signup' component={ Signup } />
-          <Route 
-            path='/login' 
-            render={ (props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>} />
+          <Route path='/login' render={ (props) => <Login {...props} nowCurrentUser={nowCurrentUser} setIsAuthenticated={setIsAuthenticated} user={currentUser}/>} />
+          
+      <Switch>
           <PrivateRoute path="/profile" user={currentUser}  component={ Profile } />
           <PrivateRoute path='/home' user={currentUser} component={Home}/>
           <PrivateRoute path='/search' user={currentUser} component={Search}/>
           <PrivateRoute path='/settings' user={currentUser} component={Settings}/>
-        </Switch>
+      </Switch>
+
       <Footer />
     </div>
   );
