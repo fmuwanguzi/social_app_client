@@ -59,10 +59,6 @@ const ProfileSection = (props) => {
     );
   };
 
-  const [name, setName] = useState("New User");
-  const [picture, setPicture] = useState("https://cdn2.vectorstock.com/i/1000x1000/49/86/man-character-face-avatar-in-glasses-vector-17074986.jpg");
-  const [location, setLocation] = useState("Location");
-  const [bio, setBio] = useState("My bio");
   const [followers, setFollowers] = useState(0);
   const [follows, setFollows] = useState(0);
   
@@ -79,8 +75,10 @@ const ProfileSection = (props) => {
             <p>{props.user.location}</p>
             <p>{props.user.bio}</p>
             <button>Follow</button>
-            <p>{props.user.follows} Followers</p>
-            <p>{follows} Following</p>
+            <div className='followers-section'>
+              <p>{followers} Followers</p>
+              <p>{follows} Following</p>
+            </div>
 
             <h5>Top Friends</h5>
           </div>
