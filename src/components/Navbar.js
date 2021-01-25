@@ -4,6 +4,7 @@ import { NavLink, Link } from "react-router-dom";
 import { FaKickstarter } from "react-icons/fa";
 
 const Navbar = (props) => {
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
@@ -74,5 +75,6 @@ const Navbar = (props) => {
     </nav>
   );
 };
+
 
 export default Navbar;

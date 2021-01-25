@@ -6,6 +6,7 @@ import ProfileSection from "../components/ProfileSection"
 const Home = () => {
   return (
       <>
+
     <div class="container page-container">
       <div class="row">
         <div class="content-containers col-sm">
