@@ -1,16 +1,16 @@
 import React from "react";
 import PostStatus from "../components/PostStatus";
 import Feed from "../components/Feed";
-import ProfileSection from "../components/ProfileSection"
+import Profile from './Profile'
 
-const Home = () => {
+const Home = (props) => {
   return (
       <>
 
     <div class="container page-container">
       <div class="row">
         <div class="content-containers col-sm">
-          <ProfileSection />
+          <Profile />
         </div>
         <div class="content-containers feed col-sm-6">
           <Feed />

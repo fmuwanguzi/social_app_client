@@ -7,14 +7,14 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 // const { REACT_APP_SERVER_URL } = keys;
 
 const Signup = () => {
-  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
 
   const handleUserName = (e) => {
-    setUsername(e.target.value);
+    setName(e.target.value);
   };
 
   const handleEmail = (e) => {
@@ -33,7 +33,7 @@ const Signup = () => {
     e.preventDefault();
 
     if (password === confirmPassword && password.length >= 8) {
-      const newUser = { username, email, password };
+      const newUser = { name, email, password };
 
       axios
         .post(`${REACT_APP_SERVER_URL}/api/users/register`, newUser)
@@ -64,7 +64,7 @@ const Signup = () => {
           <input
             type="text"
             username="username"
-            value={username}
+            value={name}
             onChange={handleUserName}
             className="form-control"
           />
