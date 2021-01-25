@@ -78,7 +78,7 @@ const Profile = (props) => {
         <div className="row">
           <div className="col-4">
             <h2>Profile</h2>
-            <img className="profile-img" src={picture} alt="angelb" />
+            <img className="profile-img" src={props.user.picture} alt="angelb" />
             <h4>{props.user.name}</h4>
             <p>{props.user.location}</p>
             <p>{props.user.bio}</p>
