@@ -2,15 +2,14 @@ import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Feed from "../components/Feed";
-import Navbar from "../components/Navbar";
 import ProfileSection from "../components/ProfileSection";
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const Profile = (props) => {
-  console.log(props);
+  console.log(props.user.name);
   const { handleLogout } = props;
-  const { exp, id, name, email } = props.user;
+  const { exp, id } = props.user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
   console.log(String(expirationTime));
@@ -32,26 +31,26 @@ const Profile = (props) => {
     });
   };
 
-  const userData = props.user ? (
-    <div>
-      <h1>Profile</h1>
-      <p>
-        <strong>Name:</strong> {name}
-      </p>
-      <p>
-        <strong>Email:</strong> {email}
-      </p>
-      <p>
-        <strong>ID:</strong> {id}
-      </p>
-      <aside>
-        <button onClick={handleRemove}>Delete Your Account</button>
-        <button>Favorite</button>
-      </aside>
-    </div>
-  ) : (
-    <h4>Loading...</h4>
-  );
+  // const userData = props.user ? (
+  //   <div>
+  //     <h1>Profile</h1>
+  //     <p>
+  //       <strong>Name:</strong> {name}
+  //     </p>
+  //     <p>
+  //       <strong>Email:</strong> {email}
+  //     </p>
+  //     <p>
+  //       <strong>ID:</strong> {id}
+  //     </p>
+  //     <aside>
+  //       <button onClick={handleRemove}>Delete Your Account</button>
+  //       <button>Favorite</button>
+  //     </aside>
+  //   </div>
+  // ) : (
+  //   <h4>Loading...</h4>
+  // );
 
   const errorDiv = () => {
     return (
@@ -63,25 +62,24 @@ const Profile = (props) => {
     );
   };
 
-  const [username, setUsername] = useState("New User");
+  const [name, setName] = useState("New User");
   const [picture, setPicture] = useState("https://cdn2.vectorstock.com/i/1000x1000/49/86/man-character-face-avatar-in-glasses-vector-17074986.jpg");
   const [location, setLocation] = useState("Location");
   const [bio, setBio] = useState("My bio");
   const [followers, setFollowers] = useState(0);
   const [follows, setFollows] = useState(0);
-
+  
 
   return (
     <>
-      <Navbar />
       <div className="container content-container">
         {/* { props.user ? userData : errorDiv() } */}
         <div className="row">
-          <div class="col-4">
+          <div className="col-4">
             <h2>Profile</h2>
             <img className="profile-img" src={picture} alt="angelb" />
-            <h4>{props.user.username}</h4>
-            <p>{location}</p>
+            <h4>{props.user.name}</h4>
+            <p>{props.user.location}</p>
             <p>{props.user.bio}</p>
             <button>Follow</button>
             <p>{props.user.follows} Followers</p>
@@ -89,7 +87,7 @@ const Profile = (props) => {
 
             <h5>Top Friends</h5>
           </div>
-          <div class="col-8 profile-posts">
+          <div className="col-8 profile-posts">
             <h2>My Posts</h2>
             <Feed />
           </div>
