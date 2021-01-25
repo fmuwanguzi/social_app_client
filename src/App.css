@@ -417,6 +417,10 @@ NavLink {
   margin-bottom: 6rem;
 }
 
+.followers-section {
+  margin-top: 2rem;
+}
+
 /* Feed */
 
 .post-image {
