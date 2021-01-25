@@ -2,13 +2,16 @@ import React from "react";
 
 import SearchUsers from "../components/SearchUsers"
 import PostStatus from "../components/PostStatus"
-import Navbar from "../components/Navbar"
 import ProfileSection from "../components/ProfileSection"
 
-const Search = () => {
+const Search = (props) => {
+
+
+
+
   return (
       <>
-       <Navbar /> 
+
     <div class="container page-container">
       <div class="row">
         <div class="content-containers col-sm">

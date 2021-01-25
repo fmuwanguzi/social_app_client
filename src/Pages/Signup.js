@@ -58,7 +58,7 @@ const Signup = () => {
       <p className="intro-text-signup">
         Connect with friends, family and many others around the world.
       </p>
-      <form onSubmit={handleSubmit}>
+      <form className='get-started-forms'onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="username">Name</label>
           <input

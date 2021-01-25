@@ -141,7 +141,7 @@ h1 {
    color: #fff;
  }
 
- form {
+ .get-started-forms {
   opacity: 0;
 }
 
@@ -163,7 +163,7 @@ h1 {
   to {bottom: 150px;}
 }
 
-form {
+.get-started-forms {
   position: relative;
   -webkit-animation: show-login 4s forwards;
   animation: show-login 4s forwards;
@@ -189,7 +189,7 @@ form {
     to {bottom: 80px;}
   }
   
-  form {
+  .get-started-forms {
     position: relative;
     -webkit-animation: show-login 4s forwards;
     animation: show-login 4s forwards;
@@ -223,7 +223,7 @@ form {
     to {bottom: 40px;}
   }
   
-  form {
+  .get-started-forms {
     position: relative;
     -webkit-animation: show-login 4s forwards;
     animation: show-login 4s forwards;
@@ -263,7 +263,7 @@ form {
    color: #fff;
  }
 
- form {
+ .get-started-forms {
   opacity: 0;
 }
 
@@ -285,7 +285,7 @@ form {
   to {bottom: 100px;}
 }
 
-form {
+.get-started-forms {
   position: relative;
   -webkit-animation: show-signup 4s forwards;
   animation: show-signup 4s forwards;
@@ -311,7 +311,7 @@ form {
     to {bottom: 20px;}
   }
   
-  form {
+  .get-started-forms {
     position: relative;
     -webkit-animation: show-signup 4s forwards;
     animation: show-signup 4s forwards;
@@ -345,7 +345,7 @@ form {
     to {bottom: 20px;}
   }
   
-  form {
+  .get-started-forms {
     position: relative;
     -webkit-animation: show-signup 4s forwards;
     animation: show-signup 4s forwards;

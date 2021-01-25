@@ -14,7 +14,7 @@ const Welcome = () => {
         </Link>
 
         <Link to='signup'>
-          <button type="button" class="signup-btn">
+          <button type="button" className="signup-btn">
             Sign Up
           </button>
         </Link>
