@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 
-import SearchUsers from "../components/SearchUsers"
-import PostStatus from "../components/CreatePost"
+import AllUsers from './AllUsers';
+import CreatePost from "../components/CreatePost"
+
 import ProfileSection from "../components/ProfileSection"
 
 const Search = (props) => {
@@ -45,11 +46,13 @@ const Search = (props) => {
         <div className="content-containers col-sm">
           <ProfileSection user={currentUser}  component={ ProfileSection } />
         </div>
-        <div className="content-containers feed col-sm-6">
-          <SearchUsers />
+
+        <div class="content-containers feed col-sm-6">
+          <AllUsers />
         </div>
-        <div className="content-containers col-sm">
-          <PostStatus />
+        <div class="content-containers col-sm">
+          <CreatePost user={currentUser} />
+
         </div>
       </div>
     </div>

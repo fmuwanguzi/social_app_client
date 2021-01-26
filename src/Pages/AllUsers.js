@@ -44,6 +44,7 @@ const AllUsers = (props) => {
         return(
             
             <div>
+                <h2>All users</h2>
               {allUsers.map((user, id)=>(
               <div key={id} className ='post-container'>
                   <img className='post-image' src={user.picture} alt=""/>
