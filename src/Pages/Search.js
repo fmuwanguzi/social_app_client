@@ -3,7 +3,7 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 
 import SearchUsers from "../components/SearchUsers"
-import PostStatus from "../components/PostStatus"
+import PostStatus from "../components/CreatePost"
 import ProfileSection from "../components/ProfileSection"
 
 const Search = (props) => {
@@ -40,15 +40,15 @@ const Search = (props) => {
   return (
       <>
 
-    <div class="container page-container">
-      <div class="row">
-        <div class="content-containers col-sm">
+    <div className="container page-container">
+      <div className="row">
+        <div className="content-containers col-sm">
           <ProfileSection user={currentUser}  component={ ProfileSection } />
         </div>
-        <div class="content-containers feed col-sm-6">
+        <div className="content-containers feed col-sm-6">
           <SearchUsers />
         </div>
-        <div class="content-containers col-sm">
+        <div className="content-containers col-sm">
           <PostStatus />
         </div>
       </div>

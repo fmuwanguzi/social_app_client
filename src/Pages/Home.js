@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 
-import PostStatus from "../components/PostStatus";
+import CreatePost from "../components/CreatePost";
 import Feed from "../components/Feed";
 import ProfileSection from "../components/ProfileSection";
 
@@ -39,16 +39,16 @@ const Home = (props) => {
   return (
       <>
 
-    <div class="container page-container">
-      <div class="row">
-        <div class="content-containers col-sm">
+    <div className="container page-container">
+      <div className="row">
+        <div className="content-containers col-sm">
           <ProfileSection user={currentUser}  component={ ProfileSection } />
         </div>
-        <div class="content-containers feed col-sm-6">
+        <div className="content-containers feed col-sm-6">
           <Feed />
         </div>
-        <div class="content-containers col-sm">
-          <PostStatus />
+        <div className="content-containers col-sm">
+          <CreatePost user={currentUser} />
         </div>
       </div>
     </div>
