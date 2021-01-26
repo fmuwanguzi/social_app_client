@@ -23,10 +23,11 @@ const Feed = (props) => {
           
           <div>
               <h2>Feed</h2>
+              
             {allUsers.map((user, id)=>(
             <div key={id} className ='post-container'>
                 <img className='post-image' src={user.picture} alt=""/>
-                <h6>{user.name} </h6>
+                <h6><a href={`/user/${user._id}`}>{user.name}</a> </h6>
                   <h7>{user.posts.slice(-1)}</h7>
                 
               </div>

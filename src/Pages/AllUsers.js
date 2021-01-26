@@ -39,19 +39,21 @@ const AllUsers = (props) => {
             console.log(error);
         })
     }
+
+    console.log(allUsers);
    
     if (allUsers){
         return(
             
             <div>
                 <h2>All users</h2>
-              {allUsers.map((user, id)=>(
-              <div key={id} className ='post-container'>
+              {allUsers.map((user, idx)=>(
+              <div key={idx} className ='post-container'>
                   <img className='post-image' src={user.picture} alt=""/>
-                  <h6>Name: {user.name} </h6>
-              <h6>followers: {user.followers.length} </h6>
-              <h6>follows: {user.follows.length}</h6>
-                    <h7>last post: {user.posts.slice(-1)} </h7>
+                  <h6><a href={`/user/${user._id}`}>{user.name}</a> </h6>
+              <h6>Followers: {user.followers.length} </h6>
+              <h6>Following: {user.follows.length}</h6>
+                    <h7>Recent Post: {user.posts.slice(-1)} </h7>
                 <br></br>
                 <button onChange={handleFollowerChange} onClick={ ()=>handleFollow(user._id)}> Follow </button>
                   

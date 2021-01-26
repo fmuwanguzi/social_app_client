@@ -79,8 +79,6 @@ const ProfileSection = (props) => {
               <p>{followers} Followers</p>
               <p>{follows} Following</p>
             </div>
-
-            <h5>Top Friends</h5>
           </div>
         </div>
       </div>
