@@ -4,6 +4,7 @@ import setAuthToken from '../utils/setAuthToken';
 
 import AllUsers from './AllUsers';
 import CreatePost from "../components/CreatePost"
+
 import ProfileSection from "../components/ProfileSection"
 
 const Search = (props) => {
@@ -40,16 +41,18 @@ const Search = (props) => {
   return (
       <>
 
-    <div class="container page-container">
-      <div class="row">
-        <div class="content-containers col-sm">
+    <div className="container page-container">
+      <div className="row">
+        <div className="content-containers col-sm">
           <ProfileSection user={currentUser}  component={ ProfileSection } />
         </div>
+
         <div class="content-containers feed col-sm-6">
           <AllUsers />
         </div>
         <div class="content-containers col-sm">
           <CreatePost user={currentUser} />
+
         </div>
       </div>
     </div>
