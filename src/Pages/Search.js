@@ -3,7 +3,7 @@ import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 
 import SearchUsers from "../components/SearchUsers"
-import PostStatus from "../components/PostStatus"
+import PostStatus from "../components/CreatePost"
 import ProfileSection from "../components/ProfileSection"
 
 const Search = (props) => {

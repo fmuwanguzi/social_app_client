@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 
-import Feed from "../components/Feed";
+import UserFeed from "../components/UserFeed";
 import ProfileSection from "../components/ProfileSection";
 
 
@@ -44,7 +44,7 @@ const Profile = () => {
           <div className="col-8 profile-posts">
 
             <h2>My Posts</h2>
-            <Feed />
+            <UserFeed user={currentUser}/>
           </div>
         </div>
       </div>

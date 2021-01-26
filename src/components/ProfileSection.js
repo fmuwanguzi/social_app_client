@@ -4,12 +4,12 @@ import axios from 'axios';
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const ProfileSection = (props) => {
-  console.log(props.user.name);
+  // console.log(props.user.name);
   const { handleLogout } = props;
   const { exp, id } = props.user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
-  console.log(String(expirationTime));
+  // console.log(String(expirationTime));
 
   if (currentTime >= expirationTime) {
     handleLogout();
@@ -18,13 +18,13 @@ const ProfileSection = (props) => {
 
   const handleRemove = (e) => {
     e.preventDefault();
-    console.log(props.user);
+    // console.log(props.user);
     const id = props.user.id;
-    console.log(id, "<<---this is the user id");
-    console.log(`${REACT_APP_SERVER_URL}/api/users/${id}`);
+    // console.log(id, "<<---this is the user id");
+    // console.log(`${REACT_APP_SERVER_URL}/api/users/${id}`);
     axios.delete(`${REACT_APP_SERVER_URL}/api/users/${id}`).then((response) => {
-      console.log(response);
-      console.log(response.data);
+      // console.log(response);
+      // console.log(response.data);
     });
   };
 
