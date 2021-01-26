@@ -1,75 +1,37 @@
 import axios from "axios";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import jwt_decode from 'jwt-decode';
+import setAuthToken from '../utils/setAuthToken';
+
 import Feed from "../components/Feed";
 import ProfileSection from "../components/ProfileSection";
 
-const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
-const Profile = (props) => {
-  console.log(props.user.name);
-  const { handleLogout } = props;
-  const { exp, id } = props.user;
-  const expirationTime = new Date(exp * 1000);
-  let currentTime = Date.now();
-  console.log(String(expirationTime));
+const Profile = () => {
 
-  if (currentTime >= expirationTime) {
-    handleLogout();
-    alert("Session has ended. Please login again.");
+  const [currentUser, setCurrentUser] = useState('');
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
+
+  useEffect(() => {
+    let token;
+    // if there is no token in localStorage, then the user is in authenticated
+    if (!localStorage.getItem('jwtToken')) {
+      setIsAuthenticated(false);
+    } else {
+      token = jwt_decode(localStorage.getItem('jwtToken'));
+      setAuthToken(localStorage.jwtToken);
+      setCurrentUser(token);
+    }
+  }, []);
+
+
+  const handleLogout = () => {
+    if (localStorage.getItem('jwtToken')) {
+      localStorage.removeItem('jwtToken');
+      setCurrentUser(null);
+      setIsAuthenticated(false);
+    }
   }
-
-  const handleRemove = (e) => {
-    e.preventDefault();
-    console.log(props.user);
-    const id = props.user.id;
-    console.log(id, "<<---this is the user id");
-    console.log(`${REACT_APP_SERVER_URL}/api/users/${id}`);
-    axios.delete(`${REACT_APP_SERVER_URL}/api/users/${id}`).then((response) => {
-      console.log(response);
-      console.log(response.data);
-    });
-  };
-
-  // const userData = props.user ? (
-  //   <div>
-  //     <h1>Profile</h1>
-  //     <p>
-  //       <strong>Name:</strong> {name}
-  //     </p>
-  //     <p>
-  //       <strong>Email:</strong> {email}
-  //     </p>
-  //     <p>
-  //       <strong>ID:</strong> {id}
-  //     </p>
-  //     <aside>
-  //       <button onClick={handleRemove}>Delete Your Account</button>
-  //       <button>Favorite</button>
-  //     </aside>
-  //   </div>
-  // ) : (
-  //   <h4>Loading...</h4>
-  // );
-
-  const errorDiv = () => {
-    return (
-      <div className="text-center pt-4">
-        <h3>
-          Please <Link to="/login">login</Link> to view this page
-        </h3>
-      </div>
-    );
-  };
-
-  const [name, setName] = useState("New User");
-  const [picture, setPicture] = useState("https://cdn2.vectorstock.com/i/1000x1000/49/86/man-character-face-avatar-in-glasses-vector-17074986.jpg");
-  const [location, setLocation] = useState("Location");
-  const [bio, setBio] = useState("My bio");
-  const [followers, setFollowers] = useState(0);
-  const [follows, setFollows] = useState(0);
-  
-
   return (
 
     <>
@@ -77,16 +39,7 @@ const Profile = (props) => {
         {/* { props.user ? userData : errorDiv() } */}
         <div className="row">
           <div className="col-4">
-            <h2>Profile</h2>
-            <img className="profile-img" src={props.user.picture} alt="angelb" />
-            <h4>{props.user.name}</h4>
-            <p>{props.user.location}</p>
-            <p>{props.user.bio}</p>
-            <button>Follow</button>
-            <p>{props.user.follows} Followers</p>
-            <p>{follows} Following</p>
-
-            <h5>Top Friends</h5>
+            <ProfileSection user={currentUser} component={ ProfileSection } />
           </div>
           <div className="col-8 profile-posts">
 
