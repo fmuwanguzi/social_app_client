@@ -1,57 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const Feed = () => {
-  const posts = [
-    {
-      id:1,
-      user: 'Brenda',
-      username: 'bbrenda2004',
-      content: 'When can we go back to normal? Asking for a friend',
-      image: 'https://cf.ltkcdn.net/socialnetworking/images/std/168795-400x400-Female-Avatar-2-lg.jpg'
-    },
+const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
-    {
-      id:2,
-      user: 'James',
-      username: 'jjabarr',
-      content: 'First post! Lets go!!!!',
-      image: 'https://cdn2.vectorstock.com/i/1000x1000/49/86/man-character-face-avatar-in-glasses-vector-17074986.jpg'
-    },
+const Feed = (props) => {
+  
+  const [allUsers, setAllUsers] = useState('')
+  const [followers, setfollowers] = useState('')
+  
+  //get route for all users
+  const users = axios.get(`${REACT_APP_SERVER_URL}/api/users/all`)
+  useEffect(() => {
+      users.then(res=>{
+          setAllUsers(res.data)
+      })
+  },[])
+  console.log(allUsers);
+  console.log(allUsers[0])
+ 
+  if (allUsers){
+      return(
+          
+          <div>
+              <h2>Feed</h2>
+            {allUsers.map((user, id)=>(
+            <div key={id} className ='post-container'>
+                <img className='post-image' src={user.picture} alt=""/>
+                <h6>{user.name} </h6>
+                  <h7>{user.posts.slice(-1)}</h7>
+                
+              </div>
+            ))}  
+            
+          </div>
+      )
+  }else{
+      return(
+          <div>
+              <h1> no users available</h1>
+          </div>
 
-    {
-      id:3,
-      user: 'Angel',
-      username: 'abarr95',
-      content: 'yall seeing this on tv ????',
-      image: 'https://www.w3schools.com/howto/img_avatar.png'
-    },
-
-    {
-      id:4,
-      user: 'David',
-      username: 'thecrocman21',
-      content: 'Cranky, wus all this',
-      image: 'https://image.flaticon.com/icons/png/512/147/147144.png'
-    },
-
-  ];
-
-  return (
-    <div className="feed-container">
-
-      <h2>Status Feed</h2>
-      {posts.map((post, id) => (
-        <div key={id} className ='post-container'>
-          <img className='post-image' src={post.image} alt=""/>
-          <h6>{post.user}@{post.username}</h6>
-          <p>{post.content}</p>
-        </div>
-        
-      ))}
-
-      
-    </div>
-  );
+      )
+  }
 };
 
 export default Feed;
