@@ -5,8 +5,9 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const AllUsers = (props) => {
 
+    
     const [allUsers, setAllUsers] = useState('')
-    const [followers, setFollowers] = useState([])
+    const [follows, setFollows] = useState([])
     
     //get route for all users
     const users = axios.get(`${REACT_APP_SERVER_URL}/api/users/all`)
@@ -19,21 +20,22 @@ const AllUsers = (props) => {
     console.log(allUsers[0])
 
     const handleFollowerChange = (e) => {
-        setFollowers(e.target.value)
+        console.log('this is the followersbuttontest')
+        setFollows(e.target.value)
     }
 
-    const handleFollow = (e) => {
+    const handleFollow = (id) => {
         //e.preventDefault();
-        console.log('your follows array',props.user.followers)
-        const id = props.user.id;
-        console.log(id)
-        const followersUpdate = {
-            followers
-        };
+        // console.log('your follows array',props.user.follows)
+        // const id = props.user.id;
+        // console.log(id)
+        // const followersUpdate = {
+        //     follows
+        // };
 
-        axios.put(`${REACT_APP_SERVER_URL}/api/users/followers/add/${id}`, followersUpdate)
+        axios.put(`${REACT_APP_SERVER_URL}/api/users/follows/add/${id}`)
         .then((response)=>{
-            console.log(response, 'follower has been added')
+            console.log(response, 'followe r has been added')
         })
         .catch((error) => {
             console.log(error);
@@ -49,21 +51,20 @@ const AllUsers = (props) => {
               <div key={id} className ='post-container'>
                   <img className='post-image' src={user.picture} alt=""/>
                   <h6>Name: {user.name} </h6>
-                <h6>followers: {user.followers.length} </h6>
+                {/* <h6>followers: {user.followers.length} </h6> */}
                 <h6>follows: {user.follows.length}</h6>
                 <h6>last post: {user.posts.slice(-1)} </h6>
                 <br></br>
                 
-                <form onClick={handleFollow}>
+                {/* <form onClick={handleFollow}>
                 <input hidden type="text" value={user._id} onChange={handleFollowerChange} />
-                <button type="button"> Add Follower test </button>
-                </form>
-                {/* onChange={handleFollowerChange}*/}  
-                {/* <form>
-                    
-                <button type="submit" onClick={ ()=>handleFollow.bind(user._id)}> Follow </button>
+                <button > Add Follower test </button>
                 </form> */}
-                {/* <button value={user._id} onClick={handleFollow}> Follow </button> */}
+                {/* onChange={handleFollowerChange}*/}  
+               
+                <button type="submit" className="btn btn-primary" onClick={()=> handleFollow(user._id)}> Follow </button>
+            
+                {/* <button value={user._id} onClick={ ()=>handleFollow()}> Follow </button> */}
                 
                 </div>
               ))}  
