@@ -41,14 +41,12 @@ const Home = (props) => {
 
     <div className="container page-container">
       <div className="row">
-        <div className="content-containers col-sm">
+        <div className="content-containers col-sm-4">
           <ProfileSection user={currentUser}  component={ ProfileSection } />
-        </div>
-        <div className="content-containers feed col-sm-6">
-          <Feed />
-        </div>
-        <div className="content-containers col-sm">
           <CreatePost user={currentUser} />
+        </div>
+        <div className="content-containers feed col-sm-8">
+          <Feed />
         </div>
       </div>
     </div>

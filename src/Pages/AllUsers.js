@@ -6,7 +6,6 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const AllUsers = (props) => {
 
-    
     const [allUsers, setAllUsers] = useState('')
     const [follows, setFollows] = useState([])
     const [redirect, setRedirect] = useState('')
@@ -22,20 +21,19 @@ const AllUsers = (props) => {
     console.log(allUsers[0])
 
     const handleFollowerChange = (e) => {
-        console.log('this is the followersbuttontest')
-        setFollows(e.target.value)
+        setfollowers(e.target.value)
     }
 
-    const handleFollow = (id) => {
-        //e.preventDefault();
-        // console.log('your follows array',props.user.follows)
-        // const id = props.user.id;
-        // console.log(id)
-        // const followersUpdate = {
-        //     follows
-        // };
+    const handleFollow = (e) => {
+        console.log(e, 'this is e')
+        console.log('your follows array',props.user.followers)
+        const id = props.user.id;
+        console.log(id)
+        const followsUpdate = {
+            followers,
+        };
 
-        axios.put(`${REACT_APP_SERVER_URL}/api/users/follows/add/${id}`)
+        axios.put(`${REACT_APP_SERVER_URL}/api/users/followers/add/${id}`, followsUpdate)
         .then((response)=>{
             console.log(response, 'follow has been added')
             setRedirect(true)
@@ -44,6 +42,8 @@ const AllUsers = (props) => {
             console.log(error);
         })
     }
+
+    console.log(allUsers);
    
     if (redirect) return <Redirect to='/logout' />
 
@@ -52,25 +52,15 @@ const AllUsers = (props) => {
             
             <div>
                 <h2>All users</h2>
-              {allUsers.map((user, id)=>(
-              <div key={id} className ='post-container'>
+              {allUsers.map((user, idx)=>(
+              <div key={idx} className ='post-container'>
                   <img className='post-image' src={user.picture} alt=""/>
-                  <h6>Name: {user.name} </h6>
-                {/* <h6>followers: {user.followers.length} </h6> */}
-                <h6>follows: {user.follows.length}</h6>
-                <h6>last post: {user.posts.slice(-1)} </h6>
-                <br></br>
-                
-                {/* <form onClick={handleFollow}>
-                <input hidden type="text" value={user._id} onChange={handleFollowerChange} />
-                <button > Add Follower test </button>
-                </form> */}
-                {/* onChange={handleFollowerChange}*/}  
-               
-                <button type="submit" className="btn btn-primary" onClick={()=> handleFollow(user._id)}> Follow </button>
-            
-                {/* <button value={user._id} onClick={ ()=>handleFollow()}> Follow </button> */}
-                
+                  <h5><a href={`/user/${user._id}`}>{user.name}</a> </h5>
+              <p>Followers: {user.followers.length} </p>
+              <p>Following: {user.follows.length}</p>
+                    <p>Recent Post: {user.posts.slice(-1)} </p>
+                <button className="btn btn-primary" onChange={handleFollowerChange} onClick={ ()=>handleFollow(user._id)}> Follow </button>
+                  
                 </div>
               ))}  
               
@@ -87,5 +77,3 @@ const AllUsers = (props) => {
 }
 
 export default AllUsers
-
-

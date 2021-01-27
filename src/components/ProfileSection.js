@@ -35,23 +35,18 @@ const ProfileSection = (props) => {
 
   return (
     <>
-    <div className="container content-container">
+    <div className="container content-container profile-content">
         {/* { props.user ? userData : errorDiv() } */}
         <div className="row">
-          <div className="col-4">
-            <h2>Profile</h2>
+          <div className="col" >
             <img className="profile-img" src={props.user.picture} alt="angelb" />
             <h4>{props.user.name}</h4>
             <p>{props.user.location}</p>
             <p>{props.user.bio}</p>
-            <button>Follow</button>
             <div className='followers-section'>
               <p>{followers} Followers:</p>
               <p>{props.user.follows} Follows</p>
             </div>
-
-            <h5>Top Friends</h5>
-            <h7>coming soon ...</h7>
           </div>
         </div>
       </div>

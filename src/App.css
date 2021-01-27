@@ -2,6 +2,22 @@
   margin: 0;
 }
 
+h2 {
+  color: #03045E;
+  text-align: center;
+}
+
+ a {
+   color: #CAF0F8;
+ }
+
+p {
+  color: #CAF0F8;
+}
+
+h5 {
+color: #ADE8F4; 
+}
 /* Navbar */
 
 
@@ -371,16 +387,16 @@ h1 {
 }
 
 .feed {
-  border-left: 2px solid #CCDBFD;
-  border-right: 2px solid #CCDBFD;
+  border-left: 2px solid #d8e0f2;
+
 }
 .col-6 {
   border: 3px solid #EDF2FB;
 }
 
 .post-container {
-  box-shadow: 0 0 15px 2px #c9c9cd;
-  background-color: #E2EAFC;
+  box-shadow: 0 0 10px 5px #d8d8dc;
+  background-color: #0077B6;
   border-radius: 15px;
   padding: 10px;
   margin-top: 3rem;
@@ -399,6 +415,7 @@ NavLink {
 
 .profile-posts {
   border-left: 2px solid #CCDBFD;
+  height: 100vh;
 }
 
 /* Settings Page */
@@ -414,7 +431,7 @@ NavLink {
 }
 
 .row {
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 
 .followers-section {
@@ -426,4 +443,38 @@ NavLink {
 .post-image {
   border-radius: 40%;
   height: 3rem;
+}
+
+/* Create Post */
+
+.post-submit input {
+  width: 90%;
+  height: 3rem;
+}
+.post-submit button {
+  margin-top: 1rem;
+  width: 50%;
+  height: 3rem;
+  display: flex;
+}
+
+/* Profile */
+
+
+
+.profile-content p {
+ color: #03045E;
+}
+
+.profile-box {
+  border: 2px solid black;
+
+}
+
+button {
+  background-color: #0077B6
+}
+
+.other-user-profile p {
+  color: #03045E;
 }

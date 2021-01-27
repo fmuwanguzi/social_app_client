@@ -40,15 +40,14 @@ const CreatePost = (props) => {
 
   return (
     <div className="update-post-container">
-      <h2>Posts</h2>
-      <form onSubmit={handleSubmit}>
+      <form className='post-submit' onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="What's happening right now?"
           onChange={handleCreatePost}
         />
         <button type="submit" className="btn btn-primary">
-          Post
+          Share Post
         </button>
       </form>
     </div>

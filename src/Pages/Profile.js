@@ -40,6 +40,7 @@ const Profile = () => {
         <div className="row">
           <div className="col-4">
             <ProfileSection user={currentUser} component={ ProfileSection } />
+            
           </div>
           <div className="col-8 profile-posts">
 
