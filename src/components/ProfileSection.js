@@ -29,8 +29,8 @@ const ProfileSection = (props) => {
   };
 
   
-  const [followers, setFollowers] = useState('coming soon');
-  const [follows, setFollows] = useState(0);
+  const [followers, setFollowers] = useState('coming soon:');
+  const [follows, setFollows] = useState('0');
   
 
   return (
@@ -45,7 +45,7 @@ const ProfileSection = (props) => {
             <p>{props.user.bio}</p>
             <div className='followers-section'>
               <p>{followers} Followers:</p>
-              <p>{props.user.follows} Follows</p>
+              <p>{follows} Follows</p>
             </div>
           </div>
         </div>

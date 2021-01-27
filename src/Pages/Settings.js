@@ -54,7 +54,7 @@ const Settings = (props) => {
       });
   };
 
-  if (redirect) return <Redirect to='/logout' />
+  if (redirect) return <Redirect to='/home' />
 
   return (
     <>
