@@ -415,6 +415,7 @@ NavLink {
 
 .profile-posts {
   border-left: 2px solid #CCDBFD;
+  height: 100vh;
 }
 
 /* Settings Page */
@@ -459,6 +460,8 @@ NavLink {
 
 /* Profile */
 
+
+
 .profile-content p {
  color: #03045E;
 }
@@ -470,4 +473,8 @@ NavLink {
 
 button {
   background-color: #0077B6
+}
+
+.other-user-profile p {
+  color: #03045E;
 }
