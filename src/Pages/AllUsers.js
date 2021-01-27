@@ -50,11 +50,10 @@ const AllUsers = (props) => {
               {allUsers.map((user, id)=>(
               <div key={id} className ='post-container'>
                   <img className='post-image' src={user.picture} alt=""/>
-                  <h6>Name: {user.name} </h6>
+                  <h5>Name: {user.name} </h5>
                 {/* <h6>followers: {user.followers.length} </h6> */}
-                <h6>follows: {user.follows.length}</h6>
-                <h6>last post: {user.posts.slice(-1)} </h6>
-                <br></br>
+                <p>follows: {user.follows.length}</p>
+                <p>last post: {user.posts.slice(-1)} </p>
                 
                 {/* <form onClick={handleFollow}>
                 <input hidden type="text" value={user._id} onChange={handleFollowerChange} />

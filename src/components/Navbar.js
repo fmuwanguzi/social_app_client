@@ -9,7 +9,7 @@ const Navbar = (props) => {
     <nav className="navbar navbar-expand-lg navbar-light">
       <div className="container">
         <Link className="navbar-brand" to="/home">
-          <FaKickstarter size={56} color="#ABC4FF" />
+          <FaKickstarter size={56} color="#0077B6" />
         </Link>
         <button
           className="navbar-toggler"

@@ -26,8 +26,8 @@ const Feed = (props) => {
             {allUsers.map((user, id)=>(
             <div key={id} className ='post-container'>
                 <img className='post-image' src={user.picture} alt=""/>
-                <h6>{user.name} </h6>
-                  <h7>{user.posts.slice(-1)}</h7>
+                <h5>{user.name} </h5>
+                  <p>{user.posts.slice(-1)}</p>
                 
               </div>
             ))}  
@@ -37,7 +37,7 @@ const Feed = (props) => {
   }else{
       return(
           <div>
-              <h1> no users available</h1>
+              <h2> no users available</h2>
           </div>
 
       )

@@ -28,7 +28,7 @@ useEffect(() => {
           {allPosts.reverse().map((post, id) => (
               <div key={id} className ='post-container'>
               <img className='post-image' src={props.user.picture} alt=""/>
-              <h6>{props.user.name}</h6>
+              <h5>{props.user.name}</h5>
               <p>{post}</p>
               </div>
           ))}

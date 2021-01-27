@@ -43,16 +43,13 @@ const Search = (props) => {
 
     <div className="container page-container">
       <div className="row">
-        <div className="content-containers col-sm">
+        <div className="content-containers col">
           <ProfileSection user={currentUser}  component={ ProfileSection } />
-        </div>
-
-        <div class="content-containers feed col-sm-6">
-          <AllUsers />
-        </div>
-        <div class="content-containers col-sm">
           <CreatePost user={currentUser} />
+        </div>
 
+        <div class="content-containers feed col-sm-8">
+          <AllUsers />
         </div>
       </div>
     </div>
