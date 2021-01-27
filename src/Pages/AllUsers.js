@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
@@ -8,7 +9,8 @@ const AllUsers = (props) => {
     
     const [allUsers, setAllUsers] = useState('')
     const [follows, setFollows] = useState([])
-    
+    const [redirect, setRedirect] = useState('')
+
     //get route for all users
     const users = axios.get(`${REACT_APP_SERVER_URL}/api/users/all`)
     useEffect(() => {
@@ -35,13 +37,16 @@ const AllUsers = (props) => {
 
         axios.put(`${REACT_APP_SERVER_URL}/api/users/follows/add/${id}`)
         .then((response)=>{
-            console.log(response, 'followe r has been added')
+            console.log(response, 'follow has been added')
+            setRedirect(true)
         })
         .catch((error) => {
             console.log(error);
         })
     }
    
+    if (redirect) return <Redirect to='/logout' />
+
     if (allUsers){
         return(
             

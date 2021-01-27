@@ -1,11 +1,13 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { Redirect } from 'react-router-dom';
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const Settings = (props) => {
   const [name, setName] = useState("");
   const [picture, setPicture] = useState("");
   const [bio, setBio] = useState("");
+  const [redirect, setRedirect] = useState('')
 
   console.log(props.user.name);
 
@@ -25,6 +27,7 @@ const Settings = (props) => {
     e.preventDefault();
     axios.delete(`${REACT_APP_SERVER_URL}/api/users/${props.user.id}`).then((response) => {
       console.log(response, "account is deleted");
+      setRedirect(true)
       // console.log(response.data);
     });
   };
@@ -44,11 +47,14 @@ const Settings = (props) => {
       )
       .then((res) => {
         console.log(res, "  settings updated");
+        setRedirect(true)
       })
       .catch((err) => {
         console.log(err);
       });
   };
+
+  if (redirect) return <Redirect to='/logout' />
 
   return (
     <>
