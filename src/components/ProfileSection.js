@@ -6,7 +6,7 @@ const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 const ProfileSection = (props) => {
   // console.log(props.user.name);
   const { handleLogout } = props;
-  const { exp, id } = props.user;
+  const { exp, id  } = props.user;
   const expirationTime = new Date(exp * 1000);
   let currentTime = Date.now();
   // console.log(String(expirationTime));
@@ -16,38 +16,7 @@ const ProfileSection = (props) => {
     alert("Session has ended. Please login again.");
   }
 
-  const handleRemove = (e) => {
-    e.preventDefault();
-    // console.log(props.user);
-    const id = props.user.id;
-    // console.log(id, "<<---this is the user id");
-    // console.log(`${REACT_APP_SERVER_URL}/api/users/${id}`);
-    axios.delete(`${REACT_APP_SERVER_URL}/api/users/${id}`).then((response) => {
-      // console.log(response);
-      // console.log(response.data);
-    });
-  };
 
-  // const userData = props.user ? (
-  //   <div>
-  //     <h1>Profile</h1>
-  //     <p>
-  //       <strong>Name:</strong> {name}
-  //     </p>
-  //     <p>
-  //       <strong>Email:</strong> {email}
-  //     </p>
-  //     <p>
-  //       <strong>ID:</strong> {id}
-  //     </p>
-  //     <aside>
-  //       <button onClick={handleRemove}>Delete Your Account</button>
-  //       <button>Favorite</button>
-  //     </aside>
-  //   </div>
-  // ) : (
-  //   <h4>Loading...</h4>
-  // );
 
   const errorDiv = () => {
     return (
@@ -59,7 +28,8 @@ const ProfileSection = (props) => {
     );
   };
 
-  const [followers, setFollowers] = useState(0);
+  
+  const [followers, setFollowers] = useState('coming soon');
   const [follows, setFollows] = useState(0);
   
 
@@ -74,8 +44,8 @@ const ProfileSection = (props) => {
             <p>{props.user.location}</p>
             <p>{props.user.bio}</p>
             <div className='followers-section'>
-              <p>{followers} Followers</p>
-              <p>{follows} Following</p>
+              <p>{followers} Followers:</p>
+              <p>{props.user.follows} Follows</p>
             </div>
           </div>
         </div>
